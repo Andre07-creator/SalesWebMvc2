@@ -33,7 +33,6 @@ namespace SalesWebMvc2
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            // se algo der errado talvez o erro esteja aqui!
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddDbContext<SalesWebMvc2Context>(options =>
 options.UseMySql(Configuration.GetConnectionString("SalesWebMvc2Context"), builder =>
